@@ -1,0 +1,25 @@
+
+public class UserInput {
+	int partysize;
+	int partylevel;
+	
+	 int getPartySize(){
+		 System.out.println("Please input the size of your party");
+		 
+		 
+		 
+		 return partysize;
+	 }
+	
+	
+	int recordPartyLevel() {
+		
+		 return partylevel;
+		 
+	 }
+
+	
+		
+	
+		}
+		
