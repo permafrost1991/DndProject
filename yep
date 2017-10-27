@@ -1,0 +1,95 @@
+import java.util.Scanner;
+import java.util.Random;
+
+//James Hood 
+/*
+ * Welcome to my integration project! This is a randomly generated dungeons & dragons program that
+ * will give you scenarios/encounters/chests and more to spicy up you campaign.
+ */
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner (System.in);
+		
+		System.out.println("~~~~~~~~~~~~~~Welcome to my randomly generated dungeons and dragons scenario program!!~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("Have you ever been bored as DM? And have thought to yourself,\"hmmm i need to make this more spicy\" Well now you can! ");
+		System.out.println("In this program you will be able to have randomly generated scenarios that will help you to make your campaign more spicy!");
+		Party party1 = new Party();
+		
+		System.out.println("Please input you party size (2-10 players only)");
+		int partysize =  scan.nextInt ();
+		
+		System.out.println("Please input you parties level! (Level: 1-20)");
+		int partylevel =  scan.nextInt ();
+		
+		party1.setPartyLevel(partylevel);
+		party1.setPartySize(partysize);
+		
+		party1.getPartySize();
+		party1.getPartyLevel();
+		scan.close ();
+		
+	}	
+	
+	public class chests {
+		public int loot;
+		Random rand = new Random();
+		int pickedNumber = rand.nextInt(100+1);
+		loot = pickedNumber * partysize;
+		
+		
+		
+	
+	
+	
+}
+	
+	
+	
+}
+
+
+
+
+//James Hood
+//This is my chests class this consist of all the different chests that I implemented into my project.
+
+public class Party {
+	private int partysize;	//fields
+	private int partylevel;	//always make fields private	
+	public int getPartySize () {
+		if (partysize <= 10 && partysize >= 2){
+			System.out.println("Thank you for following basic instructions and entering in the correct party size! Your party size is " + partysize);
+		}
+		return partysize;	
+		}
+	public void setPartySize(int size) {
+		this.partysize=size;
+	}
+	
+	public int getPartyLevel() {
+		if (partylevel <= 20 && partylevel >= 1); {
+			System.out.println("Your parties level is " + partylevel);
+		}
+		return partylevel;
+		
+	}
+	public void setPartyLevel(int lev) {
+		if (lev >= 1 && lev <= 20)
+		this.partylevel=lev;
+	}
+	
+	public Party() {
+		
+	}
+	public Party (int size, int lev) {
+		
+		partysize=size;
+		partylevel=lev;
+	}
+	
+	
+	
+}
+
